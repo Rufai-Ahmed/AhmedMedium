@@ -80,7 +80,7 @@ const SmallText = styled.div`
   font-weight: 400;
   color: white;
   line-height: 25px;
-  margin-top: 30px;
+  margin-top: 15px;
   @media (min-width: 1000px) {
     background-color: #34aa45ff;
   }
@@ -95,7 +95,7 @@ const LargeText = styled.div`
   font-size: 150px;
   font-family: "Times New Roman";
   color: white;
-  width: 70%;
+  width: 100%;
   @media (max-width: 500px) {
     font-size: 95px;
     width: 100%;
@@ -123,7 +123,7 @@ const Cube = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  padding: 30px 0;
 `;
 
 const Container = styled.div`

@@ -4,8 +4,9 @@ import Signin from "../Pages/Signin";
 import { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { MdCancel } from "react-icons/md";
+import Signup from "../Pages/Signup";
 
-const Header = () => {
+const Header = (e: any) => {
   const [show, setShow] = useState(false);
 
   const Toggle = () => {
@@ -66,6 +67,12 @@ const Header = () => {
 };
 
 export default Header;
+const ImgHolder = styled.div`
+  width: 30px;
+  height: 30px;
+  background-color: grey;
+`;
+
 const X = styled.div`
   position: fixed;
   top: 0;
