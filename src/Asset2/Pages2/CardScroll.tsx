@@ -434,7 +434,6 @@ const Discover = styled.div`
     width: 500px;
     height: 400px;
     margin-bottom: 10px;
-    background-color: blue;
   }
 `;
 const Image = styled.img`
@@ -450,7 +449,6 @@ const Card = styled.div`
   @media (min-width: 1026px) {
     width: 500px;
     height: 180px;
-    background-color: blue;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -476,7 +474,6 @@ const Wrapper = styled.div`
     justify-content: center;
     width: 95%;
     height: 95%;
-    background-color: red;
   }
 `;
 const Container = styled.section`
@@ -485,7 +482,6 @@ const Container = styled.section`
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  background-color: green;
   display: flex;
   align-items: center;
   justify-content: center;
