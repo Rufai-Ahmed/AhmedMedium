@@ -434,6 +434,8 @@ const Discover = styled.div`
     width: 500px;
     height: 400px;
     margin-bottom: 10px;
+    position: sticky;
+    top: 0;
   }
 `;
 const Image = styled.img`
@@ -485,4 +487,5 @@ const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 `;

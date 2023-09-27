@@ -17,5 +17,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "src/declaration.d.ts"]
+  "include": ["src", "src/Asset/declaration.d.ts"]
 }

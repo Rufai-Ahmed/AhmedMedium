@@ -3,7 +3,7 @@ import logo from "../Asset/medium-removebg-preview.png";
 import { FaAngleUp } from "react-icons/fa";
 import { Link } from "react-scroll";
 
-const Header = () => {
+const Footer = () => {
   return (
     <div id="bottom">
       <Container>
@@ -31,7 +31,7 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Footer;
 
 const Up = styled(FaAngleUp)`
   margin-top: 5px;
@@ -89,7 +89,7 @@ const Logo = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 90%;
+  width: 95%;
   height: 100%;
   display: flex;
   justify-content: space-between;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import pic from "../typeset.png";
 import pic1 from "../twitterl.png";
@@ -8,8 +8,21 @@ import pic4 from "../wes.png";
 import pic5 from "../coding.jpg";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { FaArrowUp } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const CardScreen = () => {
+  const [showArrow, setShowArrow] = useState(false);
+
+  const display = () => {
+    if (window.pageYOffset > 300) {
+      setShowArrow(true);
+    } else {
+      setShowArrow(false);
+    }
+  };
+
+  window.addEventListener("scroll", display);
+
   return (
     <div>
       <Container>
@@ -109,9 +122,13 @@ const CardScreen = () => {
             </Card>
           </Cards>
         </CardHold>
-        <ArrowUp>
-          <FaArrowUp />
-        </ArrowUp>
+        {showArrow ? (
+          <Link to="top" smooth={true}>
+            <ArrowUp>
+              <FaArrowUp />
+            </ArrowUp>
+          </Link>
+        ) : null}
       </Container>
     </div>
   );
@@ -128,14 +145,14 @@ const ArrowUp = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 30px;
-  position: absolute;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+  }
+  transition: all 400ms;
   bottom: 15px;
   right: 15px;
-  @media (min-width: 1026px) {
-    width: 70px;
-    height: 70px;
-    font-size: 30px;
-  }
+  position: fixed;
 `;
 const Base = styled.div`
   font-size: 16px;
@@ -165,7 +182,7 @@ const IcoTex = styled.div`
   align-items: center;
 `;
 const Text = styled.div`
-  height: 130px;
+  height: 110px;
   width: 300px;
   display: flex;
   /* align-items: center; */
@@ -173,21 +190,22 @@ const Text = styled.div`
   justify-content: space-between;
 `;
 const Num = styled.div`
-  width: 40px;
-  height: 40px;
-  color: grey;
+  color: #f2f2f2;
   font-size: 30px;
+  width: 40px;
+  display: flex;
+  align-items: start;
 `;
 const Card = styled.div`
   width: 100%;
-  background-color: white;
-  box-shadow: 0px 1px 0px 1px gray;
+  // background-color: white;
   margin-bottom: 15px;
   @media (min-width: 1026px) {
     width: 30%;
     padding: 15px;
     height: 130px;
     display: flex;
+    align-items: start;
   }
 `;
 const Cards = styled.div`
@@ -229,7 +247,7 @@ const Container = styled.section`
   display: flex;
   z-index: 2;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   border-bottom: 1px solid silver;
   position: relative;

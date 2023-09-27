@@ -3,6 +3,8 @@ import Layout from "../Block/Layout";
 import Write from "../Pages/Write";
 import Layout1 from "../Asset2/Static2/Layout";
 import Layout2 from "../components1/Common/Layout";
+import Signin from "../Pages/Signin";
+import About from "../components1/Pages/About";
 
 const Router = createBrowserRouter([
   {
@@ -22,6 +24,10 @@ const Router = createBrowserRouter([
   {
     path: "/membership",
     element: <Layout2 />,
+  },
+  {
+    path: "/About",
+    element: <About />,
   },
 ]);
 

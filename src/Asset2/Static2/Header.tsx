@@ -6,6 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Write from "../../Pages/Write";
+import Signin from "../../Pages/Signin";
 
 const Header = () => {
   const [hamburger, setHamburger] = useState(false);
@@ -27,8 +28,17 @@ const Header = () => {
 
   const [wri, setWri] = useState(false);
 
-  const show = () => {
+  const showw = () => {
     setWri(true);
+  };
+
+  const [show, setShow] = useState(false);
+
+  const Toggle = () => {
+    setShow(true);
+  };
+  const Remove = () => {
+    setShow(false);
   };
   return (
     <div>
@@ -38,91 +48,14 @@ const Header = () => {
         </div>
       ) : null}
 
+      {show ? (
+        <Hold onClick={Remove}>
+          <Signin />
+        </Hold>
+      ) : null}
+
       {header ? (
-        <Container bg="1" po="fixed">
-          <Wrapper>
-            <Logo>
-              <img src={img} alt="" />
-            </Logo>
-            <Navigate>
-              <Icon onClick={Drop}> {hamburger ? <BiMenu /> : <BiMenu />}</Icon>
-              <NavHold>
-                <Nav>Our Story</Nav>
-                <Nav>Membership</Nav>
-                <Nav>Write</Nav>
-                <Nav>Sign In</Nav>
-              </NavHold>
-              <Button bcc="black">Get Started</Button>
-            </Navigate>
-            {hamburger ? (
-              <Card>
-                <Icon onClick={Drop}>
-                  {hamburger ? (
-                    <AiOutlineClose style={{ color: "#fff" }} />
-                  ) : (
-                    <AiOutlineClose style={{ color: "#fff" }} />
-                  )}
-                </Icon>
-                <NavLink
-                  to=""
-                  style={({ isActive }) => {
-                    return {
-                      backgroundColor: isActive ? "#000" : "white",
-                      borderBottom: isActive ? "3px solid gold" : "none",
-                      textDecoration: "none",
-                      width: isActive ? "100%" : "100%",
-                    };
-                  }}
-                >
-                  <DropNav>Our Story</DropNav>
-                </NavLink>
-                <NavLink
-                  to=""
-                  style={({ isActive }) => {
-                    return {
-                      backgroundColor: isActive ? "#000" : "white",
-                      borderBottom: isActive ? "3px solid gold" : "none",
-                      textDecoration: "none",
-                      width: isActive ? "100%" : "100%",
-                    };
-                  }}
-                >
-                  <DropNav>Membership</DropNav>
-                </NavLink>
-                <NavLink
-                  to=""
-                  style={({ isActive }) => {
-                    return {
-                      backgroundColor: isActive ? "#000" : "white",
-                      borderBottom: isActive ? "3px solid gold" : "none",
-                      textDecoration: "none",
-                      width: isActive ? "100%" : "100%",
-                    };
-                  }}
-                >
-                  <Link to="/write" onClick={show}>
-                    <DropNav onClick={show}>Write</DropNav>
-                  </Link>
-                </NavLink>
-                <NavLink
-                  to=""
-                  style={({ isActive }) => {
-                    return {
-                      backgroundColor: isActive ? "#000" : "white",
-                      borderBottom: isActive ? "3px solid gold" : "none",
-                      textDecoration: "none",
-                      width: isActive ? "100%" : "100%",
-                    };
-                  }}
-                >
-                  <DropNav>Sign In</DropNav>
-                </NavLink>
-              </Card>
-            ) : null}
-          </Wrapper>
-        </Container>
-      ) : (
-        <Container bg="" po="fixed">
+        <Container bg="1" po="fixed" id="top">
           <Wrapper>
             <Logo>
               <img src={img} alt="" />
@@ -184,7 +117,111 @@ const Header = () => {
                   }}
                 >
                   <Link to="/write">
-                    <DropNav onClick={show}>Write</DropNav>
+                    <DropNav>Write</DropNav>
+                  </Link>
+                </NavLink>
+                <NavLink
+                  to=""
+                  style={({ isActive }) => {
+                    return {
+                      backgroundColor: isActive ? "#000" : "white",
+                      borderBottom: isActive ? "3px solid gold" : "none",
+                      textDecoration: "none",
+                      width: isActive ? "100%" : "100%",
+                    };
+                  }}
+                >
+                  <DropNav>Sign In</DropNav>
+                </NavLink>
+              </Card>
+            ) : null}
+          </Wrapper>
+        </Container>
+      ) : (
+        <Container bg="" po="fixed">
+          <Wrapper>
+            <Logo>
+              <img src={img} alt="" />
+            </Logo>
+            <Navigate>
+              <Icon onClick={Drop}> {hamburger ? <BiMenu /> : <BiMenu />}</Icon>
+              <NavHold>
+                <Nav>
+                  <Link
+                    to="About"
+                    style={{ color: "black", textDecoration: "none" }}
+                  >
+                    Our Story
+                  </Link>
+                </Nav>
+                <Nav>
+                  <Link
+                    to="membership"
+                    style={{ color: "black", textDecoration: "none" }}
+                  >
+                    Membership
+                  </Link>
+                </Nav>
+                <Nav>
+                  <Link
+                    to="write"
+                    style={{ color: "black", textDecoration: "none" }}
+                  >
+                    Write
+                  </Link>{" "}
+                </Nav>
+                <Nav onClick={Toggle}>Sign In</Nav>
+              </NavHold>
+              <Button bcc="black">Get Started</Button>
+            </Navigate>
+            {hamburger ? (
+              <Card>
+                <Icon onClick={Drop}>
+                  {hamburger ? (
+                    <AiOutlineClose style={{ color: "#fff" }} />
+                  ) : (
+                    <AiOutlineClose style={{ color: "#fff" }} />
+                  )}
+                </Icon>
+                <NavLink
+                  to=""
+                  style={({ isActive }) => {
+                    return {
+                      backgroundColor: isActive ? "#000" : "white",
+                      borderBottom: isActive ? "3px solid gold" : "none",
+                      textDecoration: "none",
+                      width: isActive ? "100%" : "100%",
+                    };
+                  }}
+                >
+                  <DropNav>Our Story</DropNav>
+                </NavLink>
+                <NavLink
+                  to=""
+                  style={({ isActive }) => {
+                    return {
+                      backgroundColor: isActive ? "#000" : "white",
+                      borderBottom: isActive ? "3px solid gold" : "none",
+                      textDecoration: "none",
+                      width: isActive ? "100%" : "100%",
+                    };
+                  }}
+                >
+                  <DropNav>Membership</DropNav>
+                </NavLink>
+                <NavLink
+                  to=""
+                  style={({ isActive }) => {
+                    return {
+                      backgroundColor: isActive ? "#000" : "white",
+                      borderBottom: isActive ? "3px solid gold" : "none",
+                      textDecoration: "none",
+                      width: isActive ? "100%" : "100%",
+                    };
+                  }}
+                >
+                  <Link to="/write">
+                    <DropNav>Write</DropNav>
                   </Link>
                 </NavLink>
                 <NavLink
@@ -246,7 +283,7 @@ const Nav = styled.nav`
 `;
 const Button = styled.button<{ bcc: string }>`
   width: 100px;
-  height: 50px;
+  height: 30px;
   background-color: ${({ bcc }) => bcc};
   color: #fff;
   border-radius: 30px;
@@ -255,10 +292,12 @@ const Button = styled.button<{ bcc: string }>`
   &:hover {
     background-color: grey;
   }
+
+  @media (max-width: 1026px) {
+    display: none;
+  }
 `;
 const Icon = styled.div`
-  width: 30px;
-  height: 30px;
   font-size: 30px;
   cursor: pointer;
   @media (min-width: 1026px) {
@@ -267,7 +306,6 @@ const Icon = styled.div`
 `;
 
 const Navigate = styled.div`
-  width: 130px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -281,16 +319,12 @@ const Navigate = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 150px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 20%;
 `;
 
 const Wrapper = styled.div`
   width: 95%;
-  height: 95%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -299,7 +333,7 @@ const Wrapper = styled.div`
 const Container = styled.div<{ bg: string; po: string }>`
   width: 100%;
   height: 70px;
-  background-color: ${({ bg }) => (bg ? "white" : "gold")};
+  background-color: ${({ bg }) => (bg ? "white" : "#febf16")};
   position: ${({ po }) => po};
   display: flex;
   justify-content: center;
@@ -307,4 +341,10 @@ const Container = styled.div<{ bg: string; po: string }>`
   border-bottom: 2px solid black;
   z-index: 5;
   position: relative;
+`;
+const Hold = styled.div`
+  position: absolute;
+  width: 100%;
+  background-color: rgba(840, 240, 240, 0.5);
+  z-index: 40;
 `;

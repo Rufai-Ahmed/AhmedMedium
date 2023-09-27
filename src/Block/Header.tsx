@@ -1,12 +1,19 @@
 import styled from "styled-components";
-import logo from "../Asset/medium-removebg-preview.png";
+import logo1 from "../Asset/medium-removebg-preview.png";
 import Signin from "../Pages/Signin";
 import { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { MdCancel } from "react-icons/md";
 import Signup from "../Pages/Signup";
+import bLogo from "../Asset/whiteMedium.png";
 
-const Header = (e: any) => {
+interface iBcc {
+  bcc: string;
+  logo: string;
+  brd: string;
+}
+
+const Header = ({ bcc, logo, brd }: iBcc) => {
   const [show, setShow] = useState(false);
 
   const Toggle = () => {
@@ -39,15 +46,15 @@ const Header = (e: any) => {
               <MdCancel />
             </X>
             <Logo1>
-              <Img src={logo} />
+              <Img1 src={logo1} />
             </Logo1>
           </Wrapp>
         </Drop>
       ) : null}
-      <Container>
+      <Container bcc={bcc} brd={brd}>
         <Wrapper>
           <Logo>
-            <Img src={logo} />
+            <Img src={logo ? logo : bLogo} />
           </Logo>
           <Icon onClick={rev}>
             <BiMenu />
@@ -87,7 +94,7 @@ const Wrapp = styled.div`
 const Drop = styled.div`
   width: 100%;
   height: 100vh;
-  z-index: 5;
+  z-index: 500;
   background-color: white;
   position: absolute;
   position: fixed;
@@ -114,9 +121,9 @@ const Hold = styled.div`
 const Button = styled.button<{ clr: string; bcc: string }>`
   padding: 12px 20px;
   color: ${({ clr }) => (clr ? "white" : "black")};
-  border: 2px solid black;
+  border: 2px solid #242424;
   border-radius: 30px;
-  background-color: ${({ bcc }) => (bcc ? "black" : "white")};
+  background-color: ${({ bcc }) => (bcc ? "#242424" : "white")};
   font-size: 16px;
 `;
 
@@ -129,6 +136,12 @@ const BtnHolder = styled.div`
   }
 `;
 
+const Img1 = styled.img`
+  width: 100%;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+`;
 const Img = styled.img`
   width: 100%;
   @media (max-width: 500px) {
@@ -141,7 +154,7 @@ const Logo1 = styled.div`
 `;
 const Logo = styled.div`
   height: 100%;
-  width: 20%;
+  width: 10%;
   @media (max-width: 500px) {
     width: 50%;
   }
@@ -156,11 +169,12 @@ const Wrapper = styled.div`
   padding: 16px 0;
 `;
 
-const Container = styled.div`
+const Container = styled.div<{ bcc: string; brd: string }>`
   width: 100%;
   height: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid ${({ brd }) => (brd ? "#242424" : "white")};
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${({ bcc }) => (bcc ? "white" : "#242424")};
 `;
