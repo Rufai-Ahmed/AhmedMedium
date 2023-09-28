@@ -112,7 +112,7 @@ const Icon = styled.div`
 `;
 
 const Hold = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   background-color: rgba(840, 240, 240, 0.5);
   z-index: 40;

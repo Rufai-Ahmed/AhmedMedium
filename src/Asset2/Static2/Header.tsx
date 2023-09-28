@@ -14,17 +14,17 @@ const Header = () => {
     setHamburger(!hamburger);
   };
 
-  const [header, setHeader] = useState(false);
+  const [showArrow, setShowArrow] = useState(false);
 
-  const ChangeHeader = () => {
-    const scroll = window.pageYOffset;
-    if (scroll >= 200) {
-      setHeader(true);
+  const display = () => {
+    if (window.pageYOffset > 300) {
+      setShowArrow(true);
     } else {
-      setHeader(false);
+      setShowArrow(false);
     }
   };
-  window.addEventListener("scroll", ChangeHeader);
+
+  window.addEventListener("scroll", display);
 
   const [wri, setWri] = useState(false);
 
@@ -54,7 +54,7 @@ const Header = () => {
         </Hold>
       ) : null}
 
-      {header ? (
+      {showArrow ? (
         <Container bg="1" po="fixed" id="top">
           <Wrapper>
             <Logo>
@@ -334,7 +334,8 @@ const Container = styled.div<{ bg: string; po: string }>`
   width: 100%;
   height: 70px;
   background-color: ${({ bg }) => (bg ? "white" : "#febf16")};
-  position: ${({ po }) => po};
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;

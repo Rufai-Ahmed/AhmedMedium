@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import pic from "../typeset.png";
-import pic1 from "../twitterl.png";
-import pic2 from "../mac.png";
-import pic3 from "../willet.png";
-import pic4 from "../wes.png";
-import pic5 from "../coding.jpg";
+import pic from "../0_ukd_ECs8LvyiuTG_.jpg";
+import pic1 from "../1_qVYCB8Xw85QdWOPEKZqF_A.png";
+import pic2 from "../1_qVYCB8Xw85QdWOPEKZqF_A.png";
+import pic3 from "../1_Z6IM5WZmOu73LRiaJ34nyA.png";
+import pic4 from "../1_o3Al2nuA1dTVtFGA8U2aIw.jpg";
+import pic5 from "../0_ukd_ECs8LvyiuTG_.jpg";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { FaArrowUp } from "react-icons/fa";
 import { Link } from "react-scroll";

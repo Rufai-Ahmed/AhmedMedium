@@ -9,6 +9,7 @@ import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import { FaAngleUp } from "react-icons/fa";
 import { Link } from "react-scroll";
 import logo from "../../assets1/medium-removebg-preview.png";
+import Card from "./Card";
 
 interface iData {
   img?: string;
@@ -80,6 +81,7 @@ const Medium = () => {
           </R>
         </Dbtm>
       </Container>
+      <Card />
       <Container1>
         <Wrapper1>
           <Logo1>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import pix from "../../assets1/download-removebg-preview (8).png";
 import pix2 from "../../assets1/download-removebg-preview (9).png";
 import { FiMenu } from "react-icons/fi";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [show, setShow] = useState(false);
   const Toggle = () => {
@@ -28,10 +29,31 @@ const Header = () => {
           </Left>
           <Right>
             <Navs cl="black">
-              <Nav>Our Story</Nav>
-              <Nav>Membership</Nav>
-              <Nav>Write</Nav>
-              <Nav>Signin</Nav>
+              <Nav>
+                <Link
+                  to="/About"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Our Story
+                </Link>
+              </Nav>
+              <Nav>
+                <Link
+                  to="/membership"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Membership
+                </Link>
+              </Nav>
+              <Nav>
+                <Link
+                  to="/write"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Write
+                </Link>
+              </Nav>
+              <Nav></Nav>
             </Navs>
             <Button cl="white" bg="black">
               Get Unlimited Access
@@ -46,10 +68,31 @@ const Header = () => {
           </Left>
           <Right>
             <Navs cl="white">
-              <Nav>Our Story</Nav>
-              <Nav>Membership</Nav>
-              <Nav>Write</Nav>
-              <Nav>Signin</Nav>
+              <Nav>
+                <Link
+                  to="/About"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Our Story
+                </Link>
+              </Nav>
+              <Nav>
+                <Link
+                  to="/membership"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Membership
+                </Link>
+              </Nav>
+              <Nav>
+                <Link
+                  to="/write"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Write
+                </Link>
+              </Nav>
+              <Nav></Nav>
             </Navs>
             <Button cl="white" bg="black">
               Get Unlimited Access
@@ -72,6 +115,7 @@ const Drop = styled.div`
   position: absolute;
   position: fixed;
   top: 80px;
+  z-index: 200;
 `;
 const Icon = styled.div`
   font-size: 23px;
@@ -137,4 +181,6 @@ const Container = styled.div<{ po: string; bg: string; bb: string }>`
   background-color: ${({ bg }) => bg};
   position: ${({ po }) => po};
   transition: all ease-in-out 350ms;
+  z-index: 100;
+  top: 0;
 `;
