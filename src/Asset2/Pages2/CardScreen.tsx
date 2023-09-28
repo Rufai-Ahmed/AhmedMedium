@@ -197,41 +197,21 @@ const Num = styled.div`
   align-items: start;
 `;
 const Card = styled.div`
-  width: 100%;
   // background-color: white;
   margin-bottom: 15px;
-  @media (min-width: 1026px) {
-    width: 30%;
-    padding: 15px;
-    height: 130px;
-    display: flex;
-    align-items: start;
-  }
 `;
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  @media (min-width: 1026px) {
-    align-items: center;
-    height: 180px;
-    justify-content: space-between;
-  }
+  justify-content: center;
 `;
 const CardHold = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 5px;
-  /* width: 90%; */
   min-height: 400px;
   height: 100%;
-  @media (min-width: 1026px) {
-    width: 95%;
-
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-  }
 `;
 const Top = styled.div`
   width: 95%;
