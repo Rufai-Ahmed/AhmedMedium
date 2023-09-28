@@ -197,14 +197,13 @@ const Num = styled.div`
   align-items: start;
 `;
 const Card = styled.div`
-  // background-color: white;
   margin-bottom: 15px;
 `;
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
+  width: 90%;
+  justify-content: space-between;
 `;
 const CardHold = styled.div`
   display: flex;
@@ -212,6 +211,7 @@ const CardHold = styled.div`
   padding: 5px;
   min-height: 400px;
   height: 100%;
+  justify-content: center;
 `;
 const Top = styled.div`
   width: 95%;
