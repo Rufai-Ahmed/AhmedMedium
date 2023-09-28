@@ -128,6 +128,122 @@ const CardScroll = () => {
                 <Img src={pic2} />
               </ImgHolder>
             </Card>
+            <Card>
+              <TxtHolder>
+                <TxtIcon>
+                  <Icon>
+                    <BiBulb />
+                  </Icon>
+                  <Txt>Clayton Moulynox in ILLUMINATION</Txt>
+                </TxtIcon>
+                <LargeTxt>
+                  That Time My Kid Googled Me and I Was No Longer “Dad”
+                </LargeTxt>
+                <SmallTxt>
+                  The repercussions of your online presence as a parent
+                </SmallTxt>
+                <Options>
+                  <Date>
+                    Sep 20 · 8 min read ·<Button>Parenting</Button>
+                    <Star>
+                      <BsStarFill />
+                    </Star>
+                  </Date>
+                  <Bookmark>
+                    <BiBookmark />
+                  </Bookmark>
+                </Options>
+              </TxtHolder>
+              <ImgHolder>
+                <Img src={pic} />
+              </ImgHolder>
+            </Card>
+            <Card>
+              <TxtHolder>
+                <TxtIcon>
+                  <Icon>
+                    <BiBulb />
+                  </Icon>
+                  <Txt>ZORA Whitney Alese in ZORA</Txt>
+                </TxtIcon>
+                <LargeTxt>
+                  In Renaissance, Beyoncé makes culture reckon with Blue Ivy
+                </LargeTxt>
+                <SmallTxt></SmallTxt>
+                <Options>
+                  <Date>
+                    Sep 20 · 8 min read ·<Button>Parenting</Button>
+                    <Star>
+                      <BsStarFill />
+                    </Star>
+                  </Date>
+                  <Bookmark>
+                    <BiBookmark />
+                  </Bookmark>
+                </Options>
+              </TxtHolder>
+              <ImgHolder>
+                <Img src={pic1} />
+              </ImgHolder>
+            </Card>
+            <Card>
+              <TxtHolder>
+                <TxtIcon>
+                  <Icon>
+                    <BiBulb />
+                  </Icon>
+                  <Txt>Jonathan Lethem</Txt>
+                </TxtIcon>
+                <LargeTxt>Be Kind, Be Kind, Be Kind</LargeTxt>
+                <SmallTxt>
+                  The repercussions of your online presence as a parent
+                </SmallTxt>
+                <Options>
+                  <Date>
+                    Sep 20 · 8 min read ·<Button>Parenting</Button>
+                    <Star>
+                      <BsStarFill />
+                    </Star>
+                  </Date>
+                  <Bookmark>
+                    <BiBookmark />
+                  </Bookmark>
+                </Options>
+              </TxtHolder>
+              <ImgHolder>
+                <Img src={pic3} />
+              </ImgHolder>
+            </Card>
+            <Card>
+              <TxtHolder>
+                <TxtIcon>
+                  <Icon>
+                    <BiBulb />
+                  </Icon>
+                  <Txt>Clayton Moulynox in ILLUMINATION</Txt>
+                </TxtIcon>
+                <LargeTxt>
+                  That Time My Kid Googled Me and I Was No Longer “Dad”
+                </LargeTxt>
+                <SmallTxt>
+                  The repercussions of your online presence as a parent
+                </SmallTxt>
+                <Options>
+                  <Date>
+                    Sep 20 · 8 min read ·<Button>Parenting</Button>
+                    <Star>
+                      <BsStarFill />
+                    </Star>
+                  </Date>
+                  <Bookmark>
+                    <BiBookmark />
+                  </Bookmark>
+                </Options>
+              </TxtHolder>
+              <ImgHolder>
+                <Img src={pic2} />
+              </ImgHolder>
+            </Card>
           </Left>
           <Right>
             <div
