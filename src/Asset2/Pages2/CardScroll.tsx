@@ -537,15 +537,22 @@ const Right = styled.div`
   display: flex;
   align-items: end;
   flex-direction: column;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 const Left = styled.div`
   width: 60%;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 const Wrapper = styled.div`
   width: 90%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 const Container = styled.div`
@@ -555,5 +562,4 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   padding: 50px 0;
-  flex-wrap: wrap;
 `;
