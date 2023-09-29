@@ -84,7 +84,7 @@ const Header = () => {
                   style={({ isActive }) => {
                     return {
                       backgroundColor: isActive ? "#000" : "white",
-                      borderBottom: isActive ? "3px solid gold" : "none",
+
                       textDecoration: "none",
                       width: isActive ? "100%" : "100%",
                     };
@@ -97,7 +97,7 @@ const Header = () => {
                   style={({ isActive }) => {
                     return {
                       backgroundColor: isActive ? "#000" : "white",
-                      borderBottom: isActive ? "3px solid gold" : "none",
+
                       textDecoration: "none",
                       width: isActive ? "100%" : "100%",
                     };
@@ -110,7 +110,7 @@ const Header = () => {
                   style={({ isActive }) => {
                     return {
                       backgroundColor: isActive ? "#000" : "white",
-                      borderBottom: isActive ? "3px solid gold" : "none",
+
                       textDecoration: "none",
                       width: isActive ? "100%" : "100%",
                     };
@@ -125,7 +125,6 @@ const Header = () => {
                   style={({ isActive }) => {
                     return {
                       backgroundColor: isActive ? "#000" : "white",
-                      borderBottom: isActive ? "3px solid gold" : "none",
                       textDecoration: "none",
                       width: isActive ? "100%" : "100%",
                     };
@@ -188,9 +187,10 @@ const Header = () => {
                   style={({ isActive }) => {
                     return {
                       backgroundColor: isActive ? "#000" : "white",
-                      borderBottom: isActive ? "3px solid gold" : "none",
+
                       textDecoration: "none",
                       width: isActive ? "100%" : "100%",
+                      color: "black",
                     };
                   }}
                 >
@@ -201,26 +201,31 @@ const Header = () => {
                   style={({ isActive }) => {
                     return {
                       backgroundColor: isActive ? "#000" : "white",
-                      borderBottom: isActive ? "3px solid gold" : "none",
+
                       textDecoration: "none",
                       width: isActive ? "100%" : "100%",
+                      color: "black",
                     };
                   }}
                 >
                   <DropNav>Membership</DropNav>
                 </NavLink>
                 <NavLink
-                  to=""
+                  to="/membership"
                   style={({ isActive }) => {
                     return {
                       backgroundColor: isActive ? "#000" : "white",
-                      borderBottom: isActive ? "3px solid gold" : "none",
+
                       textDecoration: "none",
                       width: isActive ? "100%" : "100%",
+                      color: "black",
                     };
                   }}
                 >
-                  <Link to="/write">
+                  <Link
+                    to="/write"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
                     <DropNav>Write</DropNav>
                   </Link>
                 </NavLink>
@@ -229,7 +234,7 @@ const Header = () => {
                   style={({ isActive }) => {
                     return {
                       backgroundColor: isActive ? "#000" : "white",
-                      borderBottom: isActive ? "3px solid gold" : "none",
+
                       textDecoration: "none",
                       width: isActive ? "100%" : "100%",
                     };
@@ -255,11 +260,10 @@ const DropNav = styled.div`
   align-items: center;
 `;
 const Card = styled.div`
-  position: absolute;
-  top: 70px;
-  right: 0;
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 300px;
+  height: 100vh;
   background-color: black;
   display: flex;
   align-items: center;
